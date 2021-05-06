@@ -21,14 +21,14 @@ function onButtonClick() {
 
         //Make result visible
         document.getElementById("result-div").classList.remove("invisible");
-        // Make error invisible
+        document.getElementById("copy-button").classList.remove("invisible");
         document.getElementById("invalid-json").classList.add("hide");
     } catch (e) {
         console.log("Parse failed");
         console.error(e);
         // Make result invisible
         document.getElementById("result-div").classList.add("invisible");
-        // Make error visible
+        document.getElementById("copy-button").classList.add("invisible");
         document.getElementById("invalid-json").classList.remove("hide");
     }
 }

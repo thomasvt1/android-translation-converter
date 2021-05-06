@@ -30,13 +30,16 @@
           name="prefix"
           class="span8"
           rows="1"
-          placeholder='dashboard_'
+          placeholder="dashboard_"
         ></textarea>
       </div>
     </div>
     <div class="row">
       <div class="center">
-        <a class="btn btn-success format" id="convert-button" onclick="onButtonClick()"
+        <a
+          class="btn btn-success format"
+          id="convert-button"
+          onclick="onButtonClick()"
           >Convert to Android Translations</a
         >
         <div class="alert alert-error fade in hide" id="invalid-json">
@@ -49,8 +52,16 @@
     <div class="row result_block">
       <div class="invisible result center" id="result-div">
         <h4>Result</h4>
-        <textarea id="result-text" class="span8" rows="8" ></textarea>
-        <a class="btn btn-info format" id="convert-button" onclick="copyToClipboard()"
+        <textarea id="result-text" class="span8" rows="8"></textarea>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="center invisible" id="copy-button">
+        <a
+          class="btn btn-info format"
+          id="convert-button"
+          onclick="copyToClipboard()"
           >Copy to clipboard</a
         >
       </div>
