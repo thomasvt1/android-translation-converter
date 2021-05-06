@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>JSON to Android Translation converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div class="row">
+      <div class="center">
+        <h4>JSON translations</h4>
+
+        <textarea
+          type="text"
+          id="json-input"
+          name="fname"
+          class="span8"
+          rows="6"
+          placeholder='Paste JSON Translations here {"key":"value"}'
+        ></textarea>
+
+        <h4>(Optional) prefix</h4>
+
+        <textarea
+          type="text"
+          id="prefix-input"
+          name="prefix"
+          class="span8"
+          rows="1"
+          placeholder='dashboard_'
+        ></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="center">
+        <a class="btn btn-success format" id="convert-button" onclick="onButtonClick()"
+          >Convert to Android Translations</a
+        >
+        <div class="alert alert-error fade in hide" id="invalid-json">
+          Invalid JSON data
+        </div>
+      </div>
+    </div>
+
+    <!-- result -->
+    <div class="row result_block">
+      <div class="invisible result center" id="result-div">
+        <h4>Result</h4>
+        <textarea id="result-text" class="span8"></textarea>
+        <a class="btn btn-info format" id="convert-button" onclick="copyToClipboard()"
+          >Copy to clipboard</a
+        >
+      </div>
+    </div>
+    <!-- /result -->
+  </body>
+</html>
