@@ -1,7 +1,7 @@
 function convert(input, prefix) {
     let result = ""
     for (let [key, value] of Object.entries(input)) {
-        let formattedKey = key.replaceAll(" ", "_").toLowerCase();
+        let formattedKey = key.replaceAll(" ", "_").replaceAll(".", "_").replaceAll("-", "_").toLowerCase();
         result += `<string name="${prefix}${formattedKey}">${value}</string>\n`
     }
     return result;
